@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+body{ font-family: Arial, Helvetica, sans-serif;}
+
+header{
+  position: fixed; top : 0; left : 0; right : 0;
+  height : 40px;
+  background-color: #111;
+}
+.header_in{
+  padding: 0 10px;
+}
+
+h1{ 
+  font-weight: 400;
+  float: left;
+  font-family: 'Carter One', cursive;
+  color : #fff;
+}
+h1 span{ display: none;}
+
+nav{ display: none;}
+nav ul{}
+nav ul li{}
+nav ul li a{}
+
+.trigger{
+  position: relative;
+  border : 1px solid yellow;
+  width : 40px;
+  float: right;
+  display: block;
+}
+.trigger span{
+  width: 30px;
+  text-indent: -99999px;
+  background: #fff;
+  position: absolute; top : clac(50% - 1px); left : clac(50% - 15px);
+}
+
+.trigger span::before,.trigger span::after{
+  position: absolute;
+  content: "";
+  display: block;
+  width : 30px ; height: 2px;
+  background: #fff;
+}
+.trigger span::before{
+  top : -7px;
+}
+.trigger span::after{
+  top : 7px;
+}
+
+.trigger.on span{ width: 0;}
+.trigger.on span::before{ transform: rotate(45deg); top : 0;}
+.trigger.on span::after{transform: rotate(-45deg); top : 0;}
+
+main{
+  width: 100%; height: 100vh;
+  background: url('../img/moon.jpg') fixed center center / cover;
+}
+
